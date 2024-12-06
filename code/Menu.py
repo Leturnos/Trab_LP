@@ -24,6 +24,13 @@ class Menu:
             self.menu_text(50, "Mountain", C_ORANGE, ((WIN_WIDTH / 2), 70))
             self.menu_text(50, "Shooter", C_ORANGE, ((WIN_WIDTH / 2), 120))
 
+            ## RU e Nome
+            self.menu_text(10, "RU: 3972136 Allan Lira Rodrigues ", C_WHITE, (105, 270))
+            self.menu_text(10, "RU: 4575991 Denzel Washington    ", C_WHITE, (105, 280))
+            self.menu_text(10, "RU: 4554000 Leandro              ", C_WHITE, (105, 290))
+            self.menu_text(10, "RU: 4556705 Luis Almeida         ", C_WHITE, (105, 300))
+            self.menu_text(10, "RU: 4570542 Wagner Prestrelo     ", C_WHITE, (105, 310))
+
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
                     self.menu_text(20, MENU_OPTION[i], C_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))

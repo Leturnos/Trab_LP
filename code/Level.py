@@ -56,10 +56,18 @@ class Level:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+
+                    # Escolhendo level onde inimigos vao aparecer
                 if event.type == EVENT_ENEMY:
-                    choice = random.choice(('Enemy1', 'Enemy2'))
-                    self.entity_list.append(EntityFactory.get_entity(choice))
+                    if self.name != 'Level3':
+                        choice = random.choice(('Enemy1', 'Enemy2' ))
+                        self.entity_list.append(EntityFactory.get_entity(choice))
+                    else:
+                        self.entity_list.append(EntityFactory.get_entity('Enemy3'))
+
+
                 if event.type == EVENT_TIMEOUT:
+                    # Dobrando o tempo do level 3
                     self.timeout -= TIMEOUT_STEP
                     if self.timeout == 0:
                         for ent in self.entity_list:
@@ -91,3 +99,4 @@ class Level:
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(left=text_pos[0], top=text_pos[1])
         self.window.blit(source=text_surf, dest=text_rect)
+        

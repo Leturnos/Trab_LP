@@ -25,12 +25,20 @@ class Menu:
             self.menu_text(50, "Shooter", C_ORANGE, ((WIN_WIDTH / 2), 120))
 
             ## RU e Nome
-            self.menu_text(10, "RU: 3972136 Allan Lira Rodrigues ", C_WHITE, (105, 270))
-            self.menu_text(10, "RU: 4575991 Denzel Washington    ", C_WHITE, (105, 280))
-            self.menu_text(10, "RU: 4554000 Leandro              ", C_WHITE, (105, 290))
-            self.menu_text(10, "RU: 4556705 Luis Almeida         ", C_WHITE, (105, 300))
-            self.menu_text(10, "RU: 4570542 Wagner Prestrelo     ", C_WHITE, (105, 310))
-
+            text_lines = [
+            "RU: 3972136 Allan Lira Rodrigues",
+            "RU: 4575991 Denzel Washington   ",
+            "RU: 4554000 Leandro             ",
+            "RU: 4556705 Luis Almeida        ",
+            "RU: 4570542 Wagner Prestrelo    "]
+            x = 10  # Posição fixa do X
+            y = 10  # Posição inicial do Y
+            line_height = 15  # Espaçamento entre linhas
+            font = pygame.font.Font(None, 20)  
+            for i, line in enumerate(text_lines):
+                text_surface = font.render(line, True, C_WHITE)
+                self.window.blit(text_surface, (x, y + i * line_height))
+                        
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
                     self.menu_text(20, MENU_OPTION[i], C_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
@@ -62,3 +70,5 @@ class Menu:
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)
+
+    

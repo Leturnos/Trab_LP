@@ -29,14 +29,12 @@ class Game:
                     level = Level(self.window, 'Level2', menu_return, player_score)
                     level_return = level.run(player_score)
 
-                    ## Level 3 chamando
+                    ## Chamando o level 3
                     if level_return:
-                       level = Level(self.window, 'Level3', menu_return, player_score)
-                       level_return = level.run(player_score)
-                    if level_return:
-                        score.save(menu_return, player_score)
-
-
+                        level = Level(self.window, 'Level3', menu_return, player_score)
+                        level_return = level.run(player_score)
+                        if level_return:
+                            score.save(menu_return, player_score)
 
             elif menu_return == MENU_OPTION[3]:
                 score.show()

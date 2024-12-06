@@ -19,6 +19,13 @@ from code.Player import Player
 class Level:
     def __init__(self, window: Surface, name: str, game_mode: str, player_score: list[int]):
         self.timeout = TIMEOUT_LEVEL
+
+        # Dobrando o tempo do level3
+        if name == 'Level3':
+            self.timeout = TIMEOUT_LEVEL * 2
+        else:
+            self.timeout = TIMEOUT_LEVEL
+            
         self.window = window
         self.name = name
         self.game_mode = game_mode
@@ -98,4 +105,3 @@ class Level:
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(left=text_pos[0], top=text_pos[1])
         self.window.blit(source=text_surf, dest=text_rect)
-        

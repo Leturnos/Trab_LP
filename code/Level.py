@@ -67,7 +67,6 @@ class Level:
 
 
                 if event.type == EVENT_TIMEOUT:
-                    # Dobrando o tempo do level 3
                     self.timeout -= TIMEOUT_STEP
                     if self.timeout == 0:
                         for ent in self.entity_list:

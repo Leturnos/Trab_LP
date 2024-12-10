@@ -28,9 +28,9 @@ class Menu:
             text_lines = [
             "RU: 3972136 Allan Lira Rodrigues",
             "RU: 4575991 Denzel Washington   ",
-            "RU: 4554000 Leandro             ",
-            "RU: 4556705 Luis Almeida        ",
-            "RU: 4570542 Wagner Prestrelo    "]
+            "RU: 4570542 Wagner Prestrelo    ",
+            "RU: 4554000 Leandro Pereira     ",
+            "RU: 4556705 Luis Almeida        "]
             x = 10  # Posição fixa do X
             y = 10  # Posição inicial do Y
             line_height = 15  # Espaçamento entre linhas

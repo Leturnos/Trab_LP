@@ -67,11 +67,10 @@ class Level:
                     # Escolhendo level onde inimigos vao aparecer
                 if event.type == EVENT_ENEMY:
                     if self.name != 'Level3':
-                        choice = random.choice(('Enemy1', 'Enemy2' ))
+                        choice = random.choice(('Enemy1', 'Enemy2'))
                         self.entity_list.append(EntityFactory.get_entity(choice))
                     else:
                         self.entity_list.append(EntityFactory.get_entity('Enemy3'))
-
 
                 if event.type == EVENT_TIMEOUT:
                     self.timeout -= TIMEOUT_STEP

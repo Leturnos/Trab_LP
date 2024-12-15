@@ -11,7 +11,7 @@ class Enemy(Entity):
     def __init__(self, name: str, position: tuple):
         super().__init__(name, position)
         self.shot_delay = ENTITY_SHOT_DELAY[self.name]
-        sorteio = random.randint(0,1) # 0 ou 1
+        sorteio = random.choice([0,1]) # 0 ou 1
         if sorteio == 0:
             self.move_control = True
         else:

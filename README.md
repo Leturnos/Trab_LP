@@ -12,13 +12,29 @@ Trabalho de Linguagem de programação feito em grupo. O professor fez o código
 - Ter alguma IDE, como o VSCode ou PyCharm
 - Ter o python instalado
 - Rodar o seguinte comando no terminal da IDE, já com o projeto aberto:
-  <pre> ```bash pip install -r requirements.txt ``` </pre>
+  
+  ```bash
+  pip install -r requirements.txt
+  ```
+
 - observação: Caso não queira baixar o pygame no global, rode os seguintes comandos antes:
-  <pre> ```python -m venv .venv``` </pre>
-  Windows:
-  <pre> ```.venv\Scripts\activate``` </pre>
-  macOS e Linux:
-  <pre> ```source .venv/bin/activate``` </pre>
+  
+  ```bash
+  python -m venv .venv
+  ```
+  
+ Windows:
+ 
+ ```bash
+ .venv\Scripts\activate
+ ```
+
+ macOS e Linux:
+
+ ```bash
+ source .venv/bin/activate
+ ```
+
 - Abrir o arquivo main.py e rodar, como mostrado no video:
 ![](https://github.com/user-attachments/assets/da45e8fe-d7c9-4c55-ba57-07e179d459eb)
 

@@ -38,7 +38,7 @@ Trabalho de Linguagem de programação feito em grupo. O professor fez o código
 - Abrir o arquivo main.py e rodar, como mostrado no video:
 ![](https://github.com/user-attachments/assets/da45e8fe-d7c9-4c55-ba57-07e179d459eb)
 - Observação: A movimentação é feita pelas setas direcionais (← ↑ ↓ →) e o tiro é segurando o Ctrl direito
-- 
+  
 GAME MENU
 
 ![Menu](https://github.com/user-attachments/assets/c9524f59-6ebd-443a-82c0-53b63eb2128f)
